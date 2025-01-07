@@ -1,1162 +1,698 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QA - Roger Funaki</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/aba.png" />
+  
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Roger Funaki" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="QA | Experiência em WEB, Mobile e API | Scrum Master" />
+    <meta property="og:site_name" content="Meu portfólio" />
+  </head>
+  
+  <body>
+    <nav id="desktop-nav">
+      <!-- Logo -->
+      <div class="logo" aria-label="Página inicial">
+        Portfólio
+      </div>
+    
+      <!-- Navegação -->
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about" aria-label="Seção Sobre">Sobre</a></li>
+          <li><a href="#experience" aria-label="Seção Experiência">Experiência</a></li>
+          <li><a href="#projects" aria-label="Seção Projetos">Projetos</a></li>
+          <li><a href="#contact" aria-label="Seção Contato">Contato</a></li>
+          <li>
+            <!-- Alternador de tema -->
+            <img
+              id="modeToggle"
+              class="icon color-icon"
+              src="./assets/icons/theme_light.png"
+              src-light="./assets/icons/theme_light.png"
+              src-dark="./assets/icons/theme_dark.png"
+              alt="Alternar tema de cor"
+              title="Alternar tema de cor"
+              role="button"
+              tabindex="0"
+            />
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+    <nav id="hamburger-nav">
+      <!-- Logo -->
+      <div class="logo" aria-label="Página inicial">Roger Funaki</div>
+    
+      <!-- Menu Hamburger -->
+      <div class="hamburger-menu">
+        <!-- Ícone do menu -->
+        <div
+          class="hamburger-icon"
+          onclick="toggleMenu()"
+          aria-label="Abrir/Fechar menu"
+          role="button"
+          tabindex="0"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    
+        <!-- Links do menu -->
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()" aria-label="Seção Sobre">Sobre</a></li>
+          <li><a href="#experience" onclick="toggleMenu()" aria-label="Seção Experiência">Experiência</a></li>
+          <li><a href="#projects" onclick="toggleMenu()" aria-label="Seção Projetos">Projetos</a></li>
+          <li><a href="#contact" onclick="toggleMenu()" aria-label="Seção Contato">Contato</a></li>
+          <li>
+            <!-- Alternador de tema -->
+            <img
+              id="modeToggle2"
+              class="icon color-icon"
+              src="./assets/theme_light.png"
+              src-light="./assets/theme_light.png"
+              src-dark="./assets/theme_dark.png"
+              alt="Alternar tema de cor"
+              title="Alternar tema de cor"
+              role="button"
+              tabindex="0"
+            />
+          </li>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="profile">
+      <!-- Container da imagem -->
+      <div class="section__pic-container">
+        <img
+          src="./assets/profile.jpg"
+          alt="Foto de perfil de Roger Funaki"
+          class="profile-picture"
+        />
+      </div>
+    
+      <!-- Texto e botões -->
+      <div class="section__text">
+        <p class="section__text__p1">Olá, tudo bem? Me chamo</p>
+        <h1 class="title">Roger Funaki</h1>
+        <p class="section__text__p2">Analista de QA | Experiência em WEB, Mobile e API | Facilitador Ágil</p>
+        
+        <!-- Botão de download do CV -->
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/roger funaki.pdf')"
+            aria-label="Baixar currículo em PDF"
+          >
+            Download CV
+          </button>
+        </div>
+    
+        <!-- Links para redes sociais -->
+        <div id="socials-container" class="socials-container">
+          <img
+            src="./assets/icons/linkedin_light.png"
+            src-light="./assets/icons/linkedin_light.png"
+            src-dark="./assets/icons/linkedin_dark.png"
+            alt="LinkedIn de Roger Funaki"
+            class="icon linkedin-icon"
+            onclick="window.open('https://www.linkedin.com/in/rogerfunaki/', '_blank')"
+            role="button"
+            tabindex="0"
+            aria-label="Acessar LinkedIn"
+          />
+          <img
+            src="./assets/icons/github_light.png"
+            src-light="./assets/icons/github_light.png"
+            src-dark="./assets/icons/github_dark.png"
+            alt="GitHub de Roger Funaki"
+            class="icon github-icon"
+            onclick="window.open('https://github.com/funaki-roger', '_blank')"
+            role="button"
+            tabindex="0"
+            aria-label="Acessar GitHub"
+          />
+          <img
+            src="./assets/icons/whatsapp_dark.png"
+            src-light="./assets/icons/whatsapp_dark.png"
+            src-dark="./assets/icons/whatsapp_light.png"
+            alt="WhatsApp de Roger Funaki"
+            class="icon whatsapp-icon"
+            onclick="window.open('https://api.whatsapp.com/send?phone=5511942396406&text=&type=phone_number&app_absent=0', '_blank')"
+            role="button"
+            tabindex="0"
+            aria-label="Iniciar conversa no WhatsApp"
+          />
+        </div>
+      </div>
+    </section>
+    
+    <section id="about">
+      <!-- Introdução da seção -->
+      <p class="section__text__p1">Conheça mais</p>
+      <h1 class="title">Sobre mim</h1>
+    
+      <!-- Container principal -->
+      <div class="section-container">
+        <!-- Imagem de perfil -->
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Foto do sobre"
+            class="about-pic"
+          />
+        </div>
+    
+        <!-- Detalhes sobre mim -->
+        <div class="about-details-container">
+          <!-- Contêiner de informações principais -->
+          <div class="about-containers">
+            <!-- Experiência -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roger Funaki - QA Analyst | WEB | Mobile | API | Scrum Master</title>
-
-    <!-- CSS files-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <!--Style switcher-->
-    <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
-    <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
-    <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
-    <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
-    <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
-    <link rel="stylesheet" href="css/style-switcher.css">
-
-</head>
-
-<body>
-    <!--Main Container Start-->
-    <div class="main-container">
-
-        <!--Aside Start-->
-        <div class="aside">
-            <div class="logo">
-                <a href="#"><span>F</span>unaki</a>
+            <div class="details-container">
+              <img
+                src="./assets/icons/experience_light.png"
+                src-light="./assets/icons/experience_light.png"
+                src-dark="./assets/icons/experience_dark.png"
+                alt="Ícone de experiência"
+                class="icon"
+              />
+              
+              <h3>Experiência</h3><br>
+              <p>+ de 9 anos na área de tecnologia<br><br></p>
+              <p>Já atuei como:<br><br></p>
+              <div class="about-slider">
+                <p class="about-slide">Assistente de suporte de TI</p>
+                <p class="about-slide">Analista de service desk</p>
+                <p class="about-slide">Técnico de helpdesk</p>
+                <p class="about-slide">Analista de helpdesk</p>
+                <p class="about-slide">Técnico de TI</p>
+                <p class="about-slide">Analista de suporte</p>
+                <p class="about-slide">Testador</p>
+                <p class="about-slide">Controle de qualidade (QC)</p>
+                <p class="about-slide">Garantia de Qualidade (QA)</p>
+                <p class="about-slide">Scrum Master</p>
+              </div>
+            </div>            
+    
+            <!-- Educação -->
+            <div class="details-container">
+              <img
+                src="./assets/icons/education_light.png"
+                src-light="./assets/icons/education_light.png"
+                src-dark="./assets/icons/education_dark.png"
+                alt="Ícone de educação"
+                class="icon"
+              />
+              <h3>Educação</h3><br>
+              <p>Tecnólogo em Desenvolvimento Full Stack - Estácio <br><br>
+                Engenheiro de Qualidade de Software - EBAC <br><br>
+                Inglês (B1) - ETW idiomas
+              </p>
             </div>
-            <div class="nav-toggler">
-                <span></span>
+          </div>
+    
+          <!-- Texto adicional -->
+          <div class="text-container">
+            <p>
+              Minha jornada na tecnologia começou de forma desafiadora, mas esses desafios moldaram minha determinação e me ensinaram a nunca desistir. Iniciei minha carreira atuando com suporte ao usuário em empresas como SONDA IT, Grupo Protege, SGS e Equifax | BoaVista. Essa experiência foi essencial para desenvolver uma visão prática das necessidades dos usuários finais e entender os desafios enfrentados no dia a dia.
+              <br><br>
+              Posteriormente, na Stone Co., dei meus primeiros passos na área de DevOps, criando scripts de testes e explorando ferramentas que ampliaram minhas habilidades técnicas. Essa transição foi o ponto de partida para minha atuação como QA (Quality Assurance), área onde me dedico a assegurar a excelência de sistemas por meio de análises criteriosas e testes abrangentes.
+              <br><br>
+              Hoje, possuo ampla experiência em testes para aplicações web, mobile e APIs, incluindo testes funcionais, de regressão, aceitação, integração, performance, segurança e usabilidade. Trabalho com testes manuais e automatizados, registrando defeitos, acompanhando resoluções e elaborando relatórios que garantem a eficiência e a confiabilidade dos sistemas.
+              <br><br>
+              Sempre que possível, dedico-me a estudar algo novo, explorando conhecimentos que ampliem minhas habilidades e me ajudem a enfrentar novos desafios. Vejo cada projeto como uma oportunidade de crescer e contribuir para soluções que façam a diferença.
+              <br><br>
+              Além da minha carreira, sou cristão, casado e pai da Olivia, que é minha maior inspiração. Apaixonado por esportes e pela cultura japonesa, sigo a máxima de Sun Tzu: <i>"Toda batalha é vencida antes mesmo de ser lutada."</i>
+              <br><br>
+              Meu objetivo é continuar evoluindo como QA, enfrentando desafios que impulsionem minha carreira e me permitam entregar resultados de excelência, sempre com dedicação e comprometimento.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <section id="experience">
+      <!-- Introdução da seção -->
+      <p class="section__text__p1">Explore minha</p>
+      <h1 class="title">Experiência</h1>
+    
+      <!-- Container principal da experiência -->
+      <div class="experience-details-container">
+        <!-- Contêiner de habilidades -->
+        <div class="about-containers">
+                  
+        <!-- Frontend -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>SASS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Material UI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- API -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">API</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>PostgreSQL</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Node.js</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Express.js</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Mobile</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>React Native</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Flutter</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Kotlin</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Swift</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Adicionais -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Adicionais</h2>
+          <div class="article-container">
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Infraestrutura e Redes</h3>
+                <p>Básico</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Plataformas em Nuvem</h3>
+                <p>GCP <br> AWS</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Metodologias Ágeis</h3>
+                <p>Scrum e Kanban</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Ferramentas de DevOps</h3>
+                <p>CI/CD <br> GitLab <br> Terraform</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="./assets/icons/checkmark_light.png"
+                src-light="./assets/icons/checkmark_light.png"
+                src-dark="./assets/icons/checkmark_dark.png"
+                alt="Ícone de confirmação"
+                class="icon"
+              />
+              <div>
+                <h3>Frameworks de Teste</h3>
+                <p>Postman<br> Cypress<br> Selenium</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        </div>
+      </div>
+
+    </section>
+    
+    <section id="projects">
+      <!-- Introdução da seção -->
+      <p class="section__text__p1">Explore meus recentes</p>
+      <h1 class="title">Projetos</h1>
+    
+      <!-- Container principal dos projetos -->
+      <div class="experience-details-container">
+        <!-- Contêiner dos projetos -->
+        <div class="about-containers">
+          <!-- Projeto 1 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects/project-1.png"
+                alt="Captura de tela do Projeto 1"
+                class="project-img"
+              />
             </div>
-            <ul class="nav">
-                <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
-                <!-- <li><a href="#services"><i class="fa fa-list"></i>Services</a></li> -->
-                <li><a href="#projects"><i class="fa fa-briefcase"></i>Projects</a></li>
-                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
-            </ul>
+            <h2 class="experience-sub-title project-title">Projeto Um</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+    
+          <!-- Projeto 2 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects/project-2.png"
+                alt="Captura de tela do Projeto 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projeto Dois</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+    
+          <!-- Projeto 3 -->
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/projects/project-3.png"
+                alt="Captura de tela do Projeto 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Projeto Três</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('https://github.com/', '_blank')"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
         </div>
-        <!--Aside End-->
-        <!--Main content Start-->
-        <div class="main-content">
-            <!--Home Section Start-->
-            <section class="home active section" id="home"> 
-                <div class="container">
-                    <div class="row">
-                        <div class="home-info padd-15">
-                            <h3 class="hello">Hello, My name is <span class="name">Roger Funaki</span></h3>
-                            <h3 class="my-profession"><span class="typing">I'm a QA Analyst</span></h3>
-                            <p>
-                                🛠️ HARD SKILLS:<br><br>
-
-                                Basic Knowledge in Infrastructure and Networks; <br>
-                                Basic knowledge and experience with Google Cloud Platform (GCP), Amazon Web Services
-                                (AWS);<br>
-                                Knowledge in unit, e2e, integration, regression, functional, API, and automated
-                                testing;<br>
-                                Basic knowledge in programming: CSS, HTML, JavaScript, Python, and SQL (databases);<br>
-                                Experience in Monitoring and Observability (SRE): New Relic, Zabbix, Prometheus, and
-                                Grafana;<br>
-                                Experience in Hardware and Support for corporate systems (e.g., CRM, SAP, and
-                                Salesforce);<br>
-                                Knowledge of agile methodologies (Scrum and Kanban) and tools that use these
-                                methodologies: Jira, Trello, and Monday;<br>
-                                Experience with Operating Systems such as Windows and Linux;<br>
-                                Basic knowledge of DevOps Tools: CI/CD - pipelines, Jenkins, Git Runner (GitLab),
-                                GitHub, and Terraform;<br>
-                                Basic knowledge of Testing Frameworks: Postman, Cypress, Cucumber, Selenium, and
-                                WebDriver;<br>
-                                Basic knowledge of Test Scenario Creation and Utilization: BDD (Behavior Driven
-                                Development);<br><br>
-
-                                🧠 SOFT SKILLS:<br><br>
-
-                                Clear and effective communication;<br>
-                                Analytical thinking;<br>
-                                Problem-solving;<br>
-                                Team management;<br>
-                                Organization and planning;<br>
-                                Decision-making ability;<br>
-                                Critical thinking;<br>
-                                Adaptability;<br>
-                                Respect for diversity;<br>
-                                Teamwork;<br>
-                                Empathy;<br>
-                                Collaboration;<br>
-                            </p>
-                            <a href="https://github.com/funaki-roger/" class="btn" target="_blank">GitHub</a>
-                            <a href="https://www.linkedin.com/in/rogerfunaki/" class="btn" target="_blank">LinkedIn</a> 
-                            <a href="#contact" data-section-index="0" class="btn hire-me">My contacts</a>
-                        </div>
-                        <div class="home-img padd-15">
-                            <img src="images/perfil.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Home Section End-->
-
-            <!--Abount Section Start-->
-            <section class="about section" id="about"> 
-                <div class="container">
-                    <div class="now">
-                        <div class="section-title padd-15">
-                            <h2>About me</h2>
-                        </div>
-                    </div>
-                    <div class="ro">
-                        <div class="about-content padd-15">
-                            <div class="row">
-                                <div class="about-text padd-15">
-                                    <h3>I am a Quality Assurance Analyst and also a <span>Scrum Master</span></h3>
-                                    <p>👨‍💻 I work as a QA (Quality Assurance), responsible for analyzing projects,
-                                        identifying necessary tests, and creating detailed test plans.
-                                        I conduct functional, regression, and acceptance testing, executing them
-                                        accurately and reporting any defects found. I also track these defects,
-                                        log incidents and non-conformities, and create comprehensive reports on progress
-                                        and results. <br><br>
-
-                                        🛠️ My journey in IT began in 2013, where I developed a solid foundation in
-                                        technical support. Over the years, I’ve had the opportunity to work in various
-                                        areas,
-                                        including Service Desk, Help Desk, IT Technician, Support Analyst, and Cloud
-                                        Support. These experiences have given me a broad understanding of the challenges
-                                        and
-                                        technological needs of companies, enabling me to solve complex problems and
-                                        offer efficient support in dynamic environments.<br><br>
-
-                                        🚀 Last year, I transitioned into the QA field, where I can apply my technical
-                                        knowledge to ensure products meet the highest quality standards.
-                                        My focus is on functional, exploratory, and automated testing, along with
-                                        actively participating in continuous improvement processes and test automation.
-                                        I contribute to creating new scripts and maintaining automated tests, always
-                                        seeking to learn and implement industry best practices.
-                                        I also work in Agile environments and support my team as a Scrum Master,
-                                        facilitating the effective implementation of agile methodologies. <br><br>
-
-                                        🌐I have an intermediate level of English, with good reading and writing
-                                        comprehension, and can understand spoken English well, allowing me to interact
-                                        with international teams and projects. <br><br>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="personal-info padd-15">
-                                    <div class="row">
-                                        <div class="info-item padd-15">
-                                            <p>Birthday: <span>September 1994</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Age: <span>30</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Positions: <span>QA Analyst - Software Testing</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Locations (in person): <span>Downtown SP</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>(Remote) Locations: <span>Brazil or let's talk</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Start Date: <span>Imediatamente</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Locality types: <span>Hybrid or Remote</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Freelancer: <span>Available</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>Marital status: <span>Married</span></p>
-                                        </div>
-                                        <div class="info-item padd-15">
-                                            <p>City: <span>Barueri - SP</span></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="buttons padd-15">
-                                            <a href="https://api.whatsapp.com/send?phone=5511942396406&text=&type=phone_number&app_absent=0" 
-                                            target="_blank" class="btn hire-me">WhatsApp</a> 
-                                            <a href="https://drive.google.com/file/d/1tkCb1JgmW_Ccd9YNbQl37H-VOXNTcILy/view?usp=sharing"
-                                            class="btn" target="_blank">Download CV</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="skills padd-15">
-                                    <div class="row">
-                                        <div class="skill-item padd-15">
-                                            <h5>JS</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 46%;"></div>
-                                                <div class="skill-percent">46%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>Python</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 46%;"></div>
-                                                <div class="skill-percent">46%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>SQL - (banco de dados)</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 70%;"></div>
-                                                <div class="skill-percent">70%</div>
-                                            </div>
-                                        </div>
-                                        <div class="skill-item padd-15">
-                                            <h5>CSS / HTML</h5>
-                                            <div class="progress">
-                                                <div class="progress-in" style="width: 76%;"></div>
-                                                <div class="skill-percent">76%</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="education padd-15">
-                                    <h3 class="title">Education</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> March 22, 2021 (Completed)
-                                                        <h4 class="timeline-title">GCP for Beginners 2021</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 5, 2021 (Completed)
-                                                        <h4 class="timeline-title">LGPD: Understanding Its Impacts</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 10, 2021 (Completed)
-                                                        <h4 class="timeline-title">Power BI Overview</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Ka Solution
-                                                        </p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 20, 2021 (Completed)
-                                                        <h4 class="timeline-title">Google Certified Associate Cloud
-                                                            Engineer</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> October 6, 2021 (Completed)
-                                                        <h4 class="timeline-title">Grafana and Telegraf: Real-Time
-                                                            Monitoring</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> October 6, 2021 (Completed)
-                                                        <h4 class="timeline-title">Git and GitHub: Control and Share
-                                                            Your Code</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> October 11, 2021 (Completed)
-                                                        <h4 class="timeline-title">Git and GitHub: Branching Strategies,
-                                                            Conflicts, and Pull Requests</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> October 13, 2021 (Completed)
-                                                        <h4 class="timeline-title">Deploy on Amazon EC2: High
-                                                            Availability and Scalability of an Application</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 2, 2021 (Completed)
-                                                        <h4 class="timeline-title">Scrum: Agility in Your Project</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 2, 2021 (Completed)
-                                                        <h4 class="timeline-title">Linux Terminal, Shell Scripting, and
-                                                            Network Management</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> January 17, 2022 (Completed)
-                                                        <h4 class="timeline-title">DevOps Essentials</h4>
-                                                        <p class="timeline-text">Certificate of Completion: 4Linux</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> January 20, 2022 (Completed)
-                                                        <h4 class="timeline-title">Containers Fundamentals</h4>
-                                                        <p class="timeline-text">Certificate of Completion: 4Linux</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> February 3, 2022 (Completed)
-                                                        <h4 class="timeline-title">Network Architecture</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> February 5, 2022 (Completed)
-                                                        <h4 class="timeline-title">AWS Cloud Practitioner Essentials Day
-                                                        </h4>
-                                                        <p class="timeline-text">Certificate of Completion: Ka Solution
-                                                        </p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> March 31, 2022 (Completed)
-                                                        <h4 class="timeline-title">AWS for Beginners 2022</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> April 7, 2022 (Completed)
-                                                        <h4 class="timeline-title">Terraform - From Basics to Advanced
-                                                        </h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> April 11, 2022 (Completed)
-                                                        <h4 class="timeline-title">DevOps: AWS with Terraform</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> May 2, 2022 (Completed)
-                                                        <h4 class="timeline-title">New Relic APM</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> May 9, 2022 (Completed)
-                                                        <h4 class="timeline-title">HTTP: Understanding the Web Behind
-                                                            the Scenes</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> January 20, 2023 (Completed)
-                                                        <h4 class="timeline-title">Docker: Creating and Managing
-                                                            Containers</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> January 20, 2023 (Completed)
-                                                        <h4 class="timeline-title">Docker: Creating Containers Without a
-                                                            Headache</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> May 9, 2023 (Completed)
-                                                        <h4 class="timeline-title">Git and GitHub: Repository, Commit,
-                                                            and Versions</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> June 5, 2023 (Completed)
-                                                        <h4 class="timeline-title">MongoDB Champion Certification</h4>
-                                                        <p class="timeline-text">Certificate of Completion: MongoDB</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> June 15, 2023 (Completed)
-                                                        <h4 class="timeline-title">SI Associate Certification</h4>
-                                                        <p class="timeline-text">Certificate of Completion: MongoDB</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> June 17, 2023 (Completed)
-                                                        <h4 class="timeline-title">DevOps: Starting with DevOps</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 8, 2023 (Completed)
-                                                        <h4 class="timeline-title">Discover SQL</h4>
-                                                        <p class="timeline-text">Certificate of Completion: LinkedIn
-                                                            Learning</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 26, 2023 (Completed)
-                                                        <h4 class="timeline-title">PostgreSQL</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 14, 2023 (Completed)
-                                                        <h4 class="timeline-title">Quality Assurance: Test Plan and Bug
-                                                            Management</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 16, 2023 (Completed)
-                                                        <h4 class="timeline-title">Quick Start in Testing and QA</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 22, 2023 (Completed)
-                                                        <h4 class="timeline-title">BDD with Cucumber in JAVA</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 27, 2023 (Completed)
-                                                        <h4 class="timeline-title">Learn CI/CD with GitLab</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 30, 2023 (Completed)
-                                                        <h4 class="timeline-title">Postman (2023): From Zero to Advanced
-                                                            + Automated Tests</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> December 4, 2023 (Completed)
-                                                        <h4 class="timeline-title">Automated Testing</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> January 9, 2024 (Completed)
-                                                        <h4 class="timeline-title">Monday - Basic to Advanced</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Udemy</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> June 29, 2024 (Completed)
-                                                        <h4 class="timeline-title">Agile Teams: Organizing Roles in a
-                                                            Team</h4>
-                                                        <p class="timeline-text">Certificate of Completion: Alura</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2022 - 2023 - (Completed)
-                                                        <h4 class="timeline-title">Educational Institution: ETW Idiomas
-                                                            - Language School</h4>
-                                                        <p class="timeline-text">Field of Study: English Language and
-                                                            English Literature</p>
-                                                    </h3>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> 2023 - 2025 (Program Paused)
-                                                        <h4 class="timeline-title">Educational Institution: Estácio de
-                                                            Sá University</h4>
-                                                        <p class="timeline-text">Field of Study: Full Stack Development
-                                                            <br>
-                                                            Degree: Technologist
-                                                        </p>
-                                                    </h3>
-                                                </div>
-
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="experience padd-15">
-                                    <h3 class="title">Experience</h3>
-                                    <div class="row">
-                                        <div class="timeline-box padd-15">
-                                            <div class="timeline shadow-dark">
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> November 2023 - Present (11
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">BLOCKBR - Digital Assets - QA Analyst +
-                                                        Scrum Master</h4>
-                                                    <p class="timeline-text">
-                                                        - Team Facilitation: Acted as Scrum Master, facilitating
-                                                        communication between team members and stakeholders, ensuring
-                                                        clarity on project status, goals, and obstacles.<br>
-                                                        - Sprint Management: Planned, executed, and reviewed sprints,
-                                                        including removing obstacles and collecting metrics to assess
-                                                        team performance.<br>
-                                                        - Testing and Quality: Performed functional, regression, and
-                                                        acceptance testing to ensure product quality.<br>
-                                                        - Documentation and Reporting: Developed test plans, identified
-                                                        and reported defects, and prepared detailed incident and
-                                                        non-conformance reports.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> March 2023 - October 2023 (8
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">SantoDigital - Cloud Analyst</h4>
-                                                    <p class="timeline-text">
-                                                        - Database Migration: Migrated PostgreSQL database to GCP Cloud
-                                                        Spanner, improving performance and scalability.<br>
-                                                        - Application Development: Participated in all stages of
-                                                        application deployment, using the Go language.<br>
-                                                        - Documentation and Presentations: Created detailed
-                                                        documentation on process advancements and status presentations
-                                                        for clients.<br>
-                                                        - Code Review: Reviewed codes on GitHub, applying DevOps best
-                                                        practices.<br>
-                                                        - SRE and FinOps Implementation: Implemented SRE practices to
-                                                        ensure system reliability and adopted FinOps for cloud cost
-                                                        optimization.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> March 2022 - December 2022 (10
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">Stone Co - Cloud Support Engineer</h4>
-                                                    <p class="timeline-text">
-                                                        - Planning and OKRs: Contributed to company planning and
-                                                        achievement of OKRs.<br>
-                                                        - Agile Methodologies: Used Scrum and Kanban for time tracking
-                                                        and structuring tasks via Jira.<br>
-                                                        - Monitoring and Observability: Used tools like New Relic for
-                                                        AWS service monitoring, alert creation, and anomaly
-                                                        detection.<br>
-                                                        - Development in JavaScript and Python: Developed and maintained
-                                                        scripts and solutions using these languages.<br>
-                                                        - Performance Reports: Explained metrics and logs to leadership,
-                                                        focusing on service performance and availability.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> May 2021 - March 2022 (11 months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">Prime Arte - Cloud Analyst</h4>
-                                                    <p class="timeline-text">
-                                                        - GCP Management: Managed Google Cloud Platform, implementing
-                                                        monitoring and automation ideas.<br>
-                                                        - Cost Optimization: Reduced operational costs through
-                                                        optimization of virtual machines used for commercial video
-                                                        editing.<br>
-                                                        - Backup and Support: Implemented backups on GCP and supported
-                                                        developers in granting access to APIs and other cloud
-                                                        resources.<br>
-                                                        - Azure Hybrid Services: Introduced Azure hybrid services to
-                                                        improve efficiency and flexibility in managing technological
-                                                        resources.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> February 2021 - May 2021 (4
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">INTECOM Inteligência Logística - Junior
-                                                        Support Analyst</h4>
-                                                    <p class="timeline-text">
-                                                        - Critical Incident Support: Provided support for critical
-                                                        incidents and resolved issues in legacy systems.<br>
-                                                        - Application Installation: Formatted and installed
-                                                        applications, created documentation, and configured collectors
-                                                        and POS systems.<br>
-                                                        - Access Management: Managed backups and access control in data
-                                                        centers.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> August 2019 - February 2021 (1
-                                                        year 7 months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">TPC - Logistica - IT Technician</h4>
-                                                    <p class="timeline-text">
-                                                        - Training and Supervision: Trained and supervised junior
-                                                        technicians, organized hardware, and managed asset
-                                                        inventories.<br>
-                                                        - Network Monitoring: Monitored and analyzed networks (TCP/IP,
-                                                        DHCP, DNS) and created access through Active Directory.<br>
-                                                        - Installation Support: Supported installations in branches and
-                                                        maintained equipment and systems.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> April 2017 - January 2019 (1 year
-                                                        10 months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">Boa Vista SCPC - Helpdesk Technician</h4>
-                                                    <p class="timeline-text">
-                                                        - Remote and On-Site Support: Provided support for antivirus and
-                                                        Office 365 issues.<br>
-                                                        - Ticket Management: Created and resolved tickets, keeping the
-                                                        knowledge base up-to-date.<br>
-                                                        - Process Improvement: Proposed improvements to technical
-                                                        support processes.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 2016 - October 2016 (4
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">SGS - Helpdesk Technician</h4>
-                                                    <p class="timeline-text">
-                                                        - Equipment Inventory: Conducted inventory of equipment and
-                                                        implemented Office 365 and Windows 10.<br>
-                                                        - VIP Support: Provided VIP support to clients and attended to
-                                                        on-call shifts on weekends and holidays.<br>
-                                                        - Ticket Backlog Management: Opened and closed backlog tickets,
-                                                        ensuring timely support.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> July 2014 - January 2016 (1 year
-                                                        7 months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">Grupo Protege - Service Desk Analyst</h4>
-                                                    <p class="timeline-text">
-                                                        - User Support: Provided support to users, recorded problems,
-                                                        and resolved low-complexity incidents.<br>
-                                                        - Access Management: Created and managed access, resolved level
-                                                        1 tickets, and escalated critical incidents.<br>
-                                                        - Service Communication: Sent notifications about maintenance
-                                                        and service interruptions.
-                                                    </p>
-                                                </div>
-
-                                                <!--timeline item-->
-                                                <div class="timeline-item">
-                                                    <div class="circle-dot"></div>
-                                                    <h3 class="timeline-date">
-                                                        <i class="fa fa-calendar"></i> December 2013 - June 2014 (7
-                                                        months)
-                                                    </h3>
-                                                    <h4 class="timeline-title">SONDA IT - IT Assistant</h4>
-                                                    <p class="timeline-text">
-                                                        - Administrative Support: Provided administrative support to
-                                                        departments such as HR and Finance.<br>
-                                                        - Ticket Management: Organized and tracked technical tickets for
-                                                        McDonald's stores.<br>
-                                                        - Equipment and Invoice Management: Managed physical backup
-                                                        equipment and handled invoice documentation.
-                                                    </p>
-                                                </div>
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Abount Section End-->
-
-            <!--
-            Services Section Start
-            <section class="service section" id="services">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Services</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </div>
-                            <h4>WhatsApp</h4>
-                            <p>
-                                +55 11 94239 - 6406
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-                    
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </div>
-                            <h4>LinkedIn</h4>
-                            <p>
-                                linkedin.com/in/rogerfunaki
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-instagram"></i>
-                            </div>
-                            <h4>Instagram</h4>
-                            <p>
-                                instagram.com/funakiroger
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <h4>GitHub</h4>
-                            <p>
-                                github.com/funaki-roger 
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-telegram"></i>
-                            </div>
-                            <h4>Telegram</h4>
-                            <p>
-                                +55 11 94239 - 6406
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-
-                    Service item start
-                    <div class="service-item padd-15">
-                        <div class="service-item-inner">
-                            <div class="icon">
-                                <i class="fab fa-microsoft"></i>
-                            </div>
-                            <h4>Outlook</h4>
-                            <p>
-                                rogerfunaki@outlook.com
-                            </p>
-                        </div>
-                    </div>
-                    Service item end
-                </div>
-            </section>
-            Services Section End
-            -->
-
-            <!--Portfolio Section Start-->
-            <section class="portfolio section" id="projects">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Portfolio</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="portfolio-heading padd-15">
-                            <h2>Dev Burguer, <br><br>
-
-                                Online store for burger joints, with features to add and delete snacks via modal.
-                                When finalizing an order, the customer's address is sent to the store's WhatsApp. The
-                                store is open from 6pm to 10pm,
-                                and these hours can be adjusted if necessary. <br><br>
-
-                                A simple and functional digital menu for a burger joint, developed with HTML, CSS,
-                                TailwindCSS and JavaScript. <br><br>
-
-
-                                <a href="https://dev-hamburgueria.vercel.app/" target="_blank" class="btn hire-me">SITE:
-                                    Dev Burguer</a> 
-                                <a href="https://github.com/funaki-roger/dev-hamburgueria" target="_blank"
-                                    class="btn hire-me">GitHub: Dev Burguer</a>
-
-                            </h2>
-                        </div>
-                    </div>
-
-
-                    <div class="row" style="display: flex; gap: 15px;">
-                        <!--portfolio item start-->
-                        <div class="portfolio-item" style="flex: 1;">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-1.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                        <!--portfolio item start-->
-                        <div class="portfolio-item" style="flex: 1;">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-2.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                    </div>
-
-                    <div class="row">
-                        <!-- Segundo texto -->
-                        <div class="portfolio-heading padd-15">
-                            <h2>Customer Registration,<br><br>
-
-                                Integration between the backend and frontend for customer management.
-                                This system supports the registration of new customers and the deletion of existing
-                                customer records,
-                                ensuring seamless interaction between the two layers of the application. <br><br>
-
-                                Project using full API with NODEJS + TypeScript and MongoDB on the backend, and React.js
-                                with TypeScript on the frontend.
-                                Integrated solution that covers all stages of web development, from API to interface
-                                design. <br><br>
-
-                                <a href="https://github.com/funaki-roger/dev-connect-BE-FE" target="_blank"
-                                    class="btn hire-me">GitHub: Customer Registration</a>
-                            </h2>
-                        </div>
-                    </div>
-
-                    <div class="row" style="display: flex; gap: 15px;">
-                        <!--portfolio item start-->
-                        <div class="portfolio-item" style="flex: 1;">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-3.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                        <!--portfolio item start-->
-                        <div class="portfolio-item" style="flex: 1;">
-                            <div class="portfolio-item-inner shadow-dark">
-                                <div class="portfolio-img">
-                                    <img src="images/portfolio/portfolio-4.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!--portfolio item end-->
-                    </div>
-                </div>
-            </section>
-            <!--Portfolio Section End-->
-
-            <!--Contact section start-->
-            <section class="contact section" id="contact">
-                <div class="container">
-                    <div class="row">
-                        <div class="section-title padd-15">
-                            <h2>Contact Me</h2>
-                        </div>
-                    </div>
-                    <h3 class="contact-title padd-15">Have You Any Questions ?</h3>
-                    <h4 class="contact-sub-title padd-15">LET'S TALK</h4>
-                    <div class="row">
-                        <!--Contact info item start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fas fa-phone"></i></div>
-                            <h4>Phone Number</h4>
-                            <p>+55 11 942396406</p>
-                        </div>
-                        <!--Contact info item end-->
-                        <!--Contact info item start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fab fa-linkedin-in"></i></div>
-                            <h4>LinkedIn</h4>
-                            <p>in/rogerfunaki</p>
-                        </div>
-                        <!--Contact info item end-->
-                        <!--Contact info item start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fab fa-microsoft"></i></div>
-                            <h4>Email</h4>
-                            <p>rogerfunaki@outlook.com</p>
-                        </div>
-                        <!--Contact info item end-->
-                        <!--Contact info item start-->
-                        <div class="contact-info-item padd-15">
-                            <div class="icon"><i class="fab fa-github-alt"></i></div>
-                            <h4>GitHub</h4>
-                            <p>funaki-roger</p>
-                        </div>
-                        <!--Contact info item end-->
-                    </div>
-                    <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-                    <!--<h4 class="contact-sub-title padd-15">I'M VERY RESPOSIVE TO MESSAGES</h4>-->
-                    <!-- Contact form -->
-                    <div class="row">
-                        <div class="contact-form padd-15">
-                            <div class="row">
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Name">
-                                    </div>
-                                </div>
-                                <div class="form-item col-6 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Subject">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <div class="form-group">
-                                        <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="form-item col-12 padd-15">
-                                    <button type="submit" class="btn">Send Message</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!--Contact section end-->
-
+      </div>
+
+    </section>
+    
+    <section id="contact">
+      <!-- Introdução da seção -->
+      <p class="section__text__p1">Entre em Contato</p>
+      <h1 class="title">Fale Comigo</h1>
+    
+      <!-- Contêiner superior das informações de contato -->
+      <div class="contact-info-upper-container">
+        <!-- E-mail -->
+        <div class="contact-info-container">
+          <img
+            src="./assets/icons/email_light.png"
+            src-light="./assets/icons/email_light.png"
+            src-dark="./assets/icons/email_dark.png"
+            alt="Ícone de email"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:rogerfunaki@outlook.com?subject=Através do site (portfólio)" 
+               aria-label="Enviar e-mail para rogerfunaki@outlook.com com o assunto 'Através do site (portfólio)'" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              rogerfunaki@outlook.com
+            </a>
+          </p>
         </div>
-        <!--Main content End-->
-
-    </div>
-
-    <!--Main Container End-->
-
-    <!--Style Switcher Start-->
-
-    <div class="style-switcher">
-        <div class="style-switcher-toggler s-icon">
-            <i class="fas fa-cog fa-spin"></i>
+        
+    
+        <!-- LinkedIn -->
+        <div class="contact-info-container">
+          <img
+            src="./assets/icons/linkedin_light.png"
+            src-light="./assets/icons/linkedin_light.png"
+            src-dark="./assets/icons/linkedin_dark.png"
+            alt="Ícone do LinkedIn"
+            class="icon linkedin-icon"
+            onclick="window.open('https://www.linkedin.com/in/rogerfunaki/', '_blank')"
+          />
+          <p>
+            <a href="https://www.linkedin.com/in/rogerfunaki/" target="_blank" rel="noopener noreferrer" aria-label="Visitar meu perfil no LinkedIn">
+              in/rogerfunaki
+            </a>
+          </p>
         </div>
-        <div class="day-night s-icon">
-            <i class="fas "></i>
+      </div>
+    </section>
+
+    <footer>
+      <!-- Navegação do rodapé -->
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about" aria-label="Ir para a seção Sobre">Sobre</a></li>
+            <li><a href="#experience" aria-label="Ir para a seção Experiência">Experiência</a></li>
+            <li><a href="#projects" aria-label="Ir para a seção Projetos">Projetos</a></li>
+            <li><a href="#contact" aria-label="Ir para a seção Contato">Contato</a></li>
+          </ul>
         </div>
-        <h4>Theme Colors</h4>
-        <div class="colors">
-            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-        </div>
-    </div>
+      </nav>
+    
+      <!-- Copyright -->
+      <p>Copyright &#169; 2025 Roger Funaki - All Rights Reserved.</p>
+    </footer>
+    
 
-    <!--Style Switcher End-->
-
-    <!-- JS Files-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" referrerpolicy="no-referrer"></script>
-     <script src="js/script.js"></script>
-    <script src="js/style.switcher.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
