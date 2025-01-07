@@ -11,6 +11,7 @@ Este repositório contém o desenvolvimento do meu novo portfólio pessoal. O ob
 - **JavaScript**: Interatividade e funcionalidades dinâmicas.
 
 ## Estrutura do Projeto
+
 ### 1. Home
 A página inicial serve como a porta de entrada para o portfólio. Ela fornece uma visão geral de quem eu sou e destaca as principais seções do site. O design é pensado para ser atraente e facilitar a navegação para outras partes do portfólio.
 
@@ -32,25 +33,22 @@ O portfólio inclui uma funcionalidade de dark mode, permitindo aos usuários al
 ### 7. Responsive Design
 O design do portfólio é responsivo, garantindo que o site seja acessível e visualmente atraente em uma variedade de dispositivos, incluindo desktops, tablets e smartphones. O layout ajusta-se automaticamente para oferecer a melhor experiência de usuário possível.
 
-# Versões
+## Branches do Projeto
 
-O portfólio estará disponível em dois idiomas:
+O projeto está organizado em **duas branches separadas**, cada uma destinada a um idioma:
 
-- **Português**
-- **Inglês**
+- **Branch `portuguese`**: Contém a versão completa do portfólio em português.
+- **Branch `english`**: Contém a versão completa do portfólio em inglês.
 
-Isso permitirá que visitantes de diferentes regiões possam acessar o conteúdo no idioma de sua preferência, tornando o portfólio mais acessível e inclusivo.
+Essa estrutura foi adotada para garantir uma separação clara entre os conteúdos de cada idioma, facilitando a manutenção e atualização das versões.
 
 ## Próximos Passos
 
 - **Implementar Dark Mode**: Adicionar a funcionalidade de alternar entre temas claro e escuro.
 - **Ajustar Responsividade**: Testar e otimizar o layout para diferentes dispositivos.
 - **Desenvolver Formulário de Contato**: Implementar a funcionalidade de envio de mensagens.
-- **Traduzir Conteúdo**: Finalizar as versões em português e inglês do portfólio.
+- **Finalizar Conteúdos**: Completar as versões em português e inglês do portfólio.
 
 ## Conclusão
 
 Este novo portfólio representa uma atualização significativa em relação ao meu trabalho anterior. Com o uso de HTML, CSS e JavaScript, estou focado em criar uma experiência de usuário moderna e eficiente. A inclusão de dark mode e design responsivo são características importantes que visam melhorar a usabilidade e a acessibilidade do site.
-
-
-
